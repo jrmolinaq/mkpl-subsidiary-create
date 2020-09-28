@@ -1,0 +1,8 @@
+<div class="input-text-container column2" [ngClass]="classContainer">
+    <input [id]="id" class="input-text" [name]="id" type="text" [(ngModel)]="value" autocomplete="off" [disabled]="disabled" (ngModelChange)="onChange()" [ngClass]="{ error: control.invalid && control.touched, valid: value }" (blur)="markAsTouched()" [placeholder]="placeholder"
+        #term (keyup)="inputItem(term.value)" />
+    <label [attr.for]="id" class="label-input">{{label}}</label>
+    <span class="error-message" *ngIf="control.invalid && control.touched">
+      {{errorMessages.getMessage(control.errors)}}
+    </span>
+</div>

@@ -1,0 +1,9 @@
+<div class="input-select-container column2" [ngClass]="classContainer">
+    <select class="input-select" [id]="id" [name]="id" [(ngModel)]="value" [disabled]="disabled" (ngModelChange)="onChange()" (blur)="markAsTouched()" [ngClass]="{ error: control.invalid && control.touched, valid: control.valid || disabled }">
+    <option *ngFor="let item of data" [value]="item.id">{{item.name}}</option>
+  </select>
+    <label [attr.for]="id" class="label-select">{{label}}</label>
+    <span class="error-message" *ngIf="control.invalid && control.touched">
+    {{errorMessages.getMessage(control.errors)}}
+  </span>
+</div>

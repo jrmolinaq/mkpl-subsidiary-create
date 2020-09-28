@@ -1,0 +1,95 @@
+.input-text-container {
+    position: relative;
+}
+
+.input-text-container.column2 {
+    float: none;
+}
+
+.input-text {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    border-radius: 4px;
+    color: #1A1A1A;
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    padding: 16px;
+    transition: all 330ms ease;
+    width: 100%;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.input-text.valid~.label {
+    color: #1A1A1A;
+    font-size: 12px;
+    top: -12px;
+}
+
+.input-text:focus~.label {
+    color: #0D4D64;
+    font-size: 12px;
+    top: -12px;
+}
+
+.input-text:focus {
+    border: 2px solid #0D4D64;
+}
+
+.input-text.error {
+    border-color: #E24D56;
+}
+
+.input-text.error~.label {
+    color: #E24D56;
+    font-size: 12px;
+    top: -12px;
+}
+
+.input-text.disabled,
+.input:disabled {
+    border-color: rgba(0, 0, 0, 0.32);
+    color: rgba(0, 0, 0, 0.32);
+    cursor: not-allowed;
+}
+
+.input-text.disabled~.label,
+.input:disabled~.label {
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.label-input {
+    background-color: #FFF;
+    color: #979797;
+    font-size: 16px;
+    left: 8px;
+    letter-spacing: 0.15px;
+    line-height: 24px;
+    padding: 0 8px;
+    pointer-events: none;
+    position: absolute;
+    top: 16px;
+    transition: all 330ms ease;
+    border: none;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.error-message {
+    color: #E24D56;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+}
+
+.medium-input {
+    width: 300px;
+}
+
+.big-input {
+    width: 600px;
+}

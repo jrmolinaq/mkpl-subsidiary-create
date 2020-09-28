@@ -1,0 +1,31 @@
+.chip {
+  background-color: rgba(96, 212, 227, 0.3);
+  border: 1px solid #60D4E3;
+  border-radius: 16px;
+  height: 25px;
+  width: 105px;
+}
+.chip.info {
+  background-color: rgba(96, 212, 227, 0.3);
+  border: 1px solid #60D4E3;
+}
+.chip.success {
+  background-color: rgba(7, 206, 86, 0.3);
+  border: 1px solid #07CE56;
+}
+.chip.danger {
+  background-color: rgba(226, 77, 86, 0.3);
+  border: 1px solid #E24D56;
+}
+.chip.warning {
+  background-color: rgba(239, 165, 30, 0.3);
+  border: 1px solid #EFA51E;
+}
+.chip.progress {
+  background-color: rgba(255, 177, 150, 0.3);
+  border: 1px solid #FFB196;
+}
+.chip.manual {
+  background-color: rgba(255, 177, 150, 0.15);
+  border: 1px solid #FFB196;
+}

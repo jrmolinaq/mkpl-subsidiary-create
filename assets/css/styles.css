@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i|Poppins:400,400i,500,500i,700,700i&display=swap');
+@import './variables/_sizes.css';
+@import './layout/_layout2.css';
+@import './layout/_margins.css';
+@import './commons/_fonts.css';
+@import './commons/_buttons.css';
+@import './commons/_status.css';
+@import './icons.css';
+
+@import './stepper.component.css';
+@import './input-control.component.css';
+@import './select-control.component.css';
+@import './modal.component.css';
+@import './create-subsidiary.component.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+/* Prevent Firefox to display spin number */
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.info-card {
+  background-color: #FFF;
+  border: 2px solid #F5F6FB;
+  border-radius: 12px;
+  padding: 24px 32px 26px;
+}
+
+/* Modal */
+
+.modal-content {
+  max-width: 560px;
+  width: 100%;
+}
+
+.header-content {
+  background-color: #F8F8F8;
+  height: 240px;
+}
+
+.warning-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.modal-message {
+  padding: 0 67px;
+}
+
+.icon-sortable {
+  transition: color 290ms cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  width: 10px;
+  border: none;
+  background: 0 0;
+}
+
+a.link-simple, a.link-simple:hover {
+  text-decoration:none;
+  color: #F5F6FB;
+}
+
+a.link-simple.deep-sea-green, a.link-simple.deep-sea-green:hover {
+  text-decoration:none;
+  color: #0D4D64;
+}
+
+div.column2.no-float {
+  float: none;
+}

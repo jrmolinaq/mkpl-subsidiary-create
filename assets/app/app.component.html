@@ -1,0 +1,110 @@
+<div *ngIf="currentStep === 0; else stepsBlock" class=" subsidiary-container row2 center middle">
+	<div class="column2 center middle">
+	  <img class="img-subsidiary m-bottom-12" src="/o/mkpl-subsidiary-create/icons/subsidiary.png" alt="Create subsidiary" />
+	  <h1 class="title-provider title-small deep-sea-green bold column2 center m-bottom-9">Crear sucursales</h1>
+	  <div class="description-container m-bottom-13">
+		<p class="description-text text-big deep-sea-green text-center">
+		  Comienza creando las sucursales actuales y activas en tu empresa. La información que se solicita es de carácter
+		  <span class="description-text text-big deep-sea-green bold">*obligatorio</span>
+		  para la correcta creación. Haz clic en Crear sucursal para comenzar.
+		</p>
+	  </div>
+	  <button class="button-primary" type="button" (click)="nextStep()">Crear sucursal</button>
+	</div>
+  </div>
+  <ng-template #stepsBlock>
+	<!-- <form [formGroup]="form" class="steps-container column2 center" *ngIf="this.cities"
+	(ngSubmit)="createSubsidiary($event)"> -->
+	<form [formGroup]="form" class="steps-container column2 center" (ngSubmit)="createSubsidiary($event)">
+	  <div class="form-content column2 center">
+		<div class="title-container column2 center m-top-14 m-bottom-14">
+		  <h1 class="title-medium deep-sea-green m-bottom-5">Crear sucursales</h1>
+		  <p class="text-big deep-sea-green">
+			La siguiente es información básica y <span class="text-big deep-sea-green bold">*obligatoria</span> para la
+			correcta creación de las sucursales.
+		  </p>
+		</div>
+		<stepper [currentStep]="currentStep" [qtySteps]="2"></stepper>
+		<div *ngIf="currentStep === 1" formGroupName="general" class="step-container column2 m-top-6">
+		  <h3 class="title-small deep-sea-green medium m-bottom-12">Datos generales</h3>
+		  <app-input-control formControlName="company" label="Nombre de la sucursal" id="company" class="m-bottom-9">
+		  </app-input-control>
+		  <app-select-control formControlName="country" label="País" id="country" [data]="countries" class="m-bottom-9"
+			(valueChange)="changeCountry($event)"></app-select-control>
+		  <app-select-control formControlName="regional" label="Regional" id="regional" [data]="regional"
+			class="m-bottom-9" (valueChange)="changeRegional($event)"></app-select-control>
+		  <app-select-control formControlName="city" label="Ciudad" id="city" [data]="generalCities" class="m-bottom-9">
+		  </app-select-control>
+		  <app-input-control formControlName="address" label="Dirección" id="address" class="m-bottom-9">
+		  </app-input-control>
+		  <div class="buton-container row2 center m-top-6 m-bottom-6">
+			<button type="button" (click)="previousStep()" class="button-secondary m-right-4">Atrás</button>
+			<button type="button" (click)="nextStep()" class="button-primary"
+			  [disabled]="form.get('general').invalid">Siguiente</button>
+		  </div>
+		</div>
+		<div *ngIf="currentStep === 2" formGroupName="contact" class="step-container column2 m-top-6">
+		  <h3 class="title-small deep-sea-green medium m-bottom-7">Datos generales</h3>
+		  <p class="text-normal deep-sea-green m-bottom-12">
+			La siguiente es información básica sobre un responsable de la plataforma para resolver posibles dificultades.
+		  </p>
+		  <app-input-control formControlName="contactName" label="Nombre de contacto" id="contactName" class="m-bottom-9">
+		  </app-input-control>
+		  <app-input-control formControlName="contactPhone" label="Teléfono de contacto" id="contactPhone"
+			class="m-bottom-9"></app-input-control>
+		  <app-input-control formControlName="contactEmail" label="Correo electrónico" id="contactEmail"
+			class="m-bottom-9"></app-input-control>
+		  <h3 class="text-big bold deep-sea-green m-bottom-3">Datos del administrador general</h3>
+		  <p class="text-normal deep-sea-green m-bottom-9">
+			El siguiente es el correo electrónico actual del administrador de la plataforma, puede hacer clic en el icono
+			lápiz para
+			editar la información si es necesario.
+		  </p>
+		  <app-input-control formControlName="adminEmail" label="Correo electrónico" id="adminEmail" class="m-bottom-9">
+		  </app-input-control>
+		  <div class="buton-container row2 center m-top-6 m-bottom-6">
+			<button type="button" [disabled]="loading" (click)="previousStep()"
+			  class="button-secondary m-right-4">Atrás</button>
+			<!-- <button type="button" (click)="nextStep()" class="button-primary"
+			  [disabled]="form.get('contact').invalid">Siguiente</button> -->
+		  </div>
+		</div>
+		<!-- <div *ngIf="currentStep === 3" class="step-container column2 m-top-6">
+		  <h3 class="title-small deep-sea-green medium m-bottom-4">Tiempo de entrega</h3>
+		  <delivery-city-times [regions]="regions" [cities]="cities" (locationsUpdated)="setLocations($event)">
+		  </delivery-city-times>
+		  <div class="buton-container row2 center m-top-6 m-bottom-6">
+			<button type="button" (click)="previousStep()" [disabled]="loading" class="button-secondary m-right-4">Atrás</button>
+		  </div>
+		</div> -->
+	  </div>
+	  <div class="form-footer row2 end m-right-5">
+		<!-- <button type="submit" class="button-primary"
+		  [disabled]="formValidity()">{{loading ? 'Cargando' : 'Crear'}}</button> -->
+
+		  <button type="submit" class="button-primary"
+		  [disabled]="form.invalid">{{loading ? 'Cargando' : 'Crear'}}</button>
+	  </div>
+	</form>
+  </ng-template>
+  
+  <modal class="modal-hidden" id="modal-subsidiary-create" classContent="modal-content" [applyPadding]="false">
+	<div class="modal-content column2 center">
+	  <div class="header-content width-100 row2 center middle m-bottom-4">
+		<img class="icon" [src]="requestError ? '/o/mkpl-subsidiary-create/icons/doc-error.svg' : '/o/mkpl-subsidiary-create/icons/doc-success.svg'"
+		  alt="Estado" />
+	  </div>
+	  <div class="modal-message column2 center">
+		<h2 class="title-medium text-center poppins bold m-bottom-4 deep-sea-green">
+		  {{requestError ? '¡Los datos no se guardaron!' : '¡Datos creados!'}}
+		</h2>
+		<p class="field-text deep-sea-green m-bottom-9 text-center">
+		  {{requestError ? 'Los datos ingresados no fueron guardados, por favor inténtalo nuevamente.' : 'Los datos ingresados se guardaron con éxito'}}
+		</p>
+		<button class="button-primary m-bottom-9" (click)="closeModal()" type="button">
+		  {{requestError ? 'Ingresar datos' : 'Regresar'}}
+		</button>
+	  </div>
+	</div>
+  </modal>
+  

@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+}
+.title.section {
+  color: #0D4D64;
+  font-size: 24px;
+  font-weight: bold;
+}
+.title.page {
+  font-size: 16px;
+}
+
+.card-title {
+  color: #0D4D64;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.field-message {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.field-text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.title-normal {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 49px;
+}
+
+.title-medium {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.title-small,
+.title-small-poppins {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.text-big {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.text-normal {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-small {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.title-modal {
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 44px;
+}
+
+.title-small,
+.title-small-roboto {
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.subtitle-modal {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.text-error {
+  color: #E24D56;
+}
+
+.emperor {
+  color: #505050;
+}
+
+.deep-sea-green {
+  color: #0D4D64;
+}
+
+.tiber {
+  color: #093545;
+}
+
+.white {
+  color: #FFF;
+}
+
+.black {
+  color: #000;
+}
+
+.hoki {
+  color: #638A99;
+}
+
+.scorpion {
+  color: #565656;
+}
+
+.boulder {
+  color: #7B7B7B;
+}
+
+.gothic {
+  color: #6890A0;
+}
+
+.jungle-mist {
+  color: #B6CAD1;
+}
+
+.fuel-yellow {
+  color: #EFA51E;
+}
+
+.gray {
+  color: #8D8D8D;
+}
+
+.white-lilac {
+  color: #F5F6FB;
+}
+
+.iron {
+  color: #DCDCDE;
+}
+
+.mystic {
+  color: #E7ECEF;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

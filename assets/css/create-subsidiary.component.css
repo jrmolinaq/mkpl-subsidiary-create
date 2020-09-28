@@ -1,0 +1,152 @@
+.subsidiary-container {
+  height: 610px;
+}
+
+.img-subsidiary {
+  height: 120px;
+  width: 157px;
+}
+
+.description-container {
+  width: 620px;
+}
+
+.description-text {
+  letter-spacing: 0.2px;
+  line-height: 22px;
+}
+
+.steps-container {
+  background-color: #FFF;
+  border: 2px solid #F5F6FB;
+  border-radius: 8px;
+}
+
+.form-content {
+  max-width: 690px;
+  width: 100%;
+}
+
+.step-container {
+  max-width: 655px;
+  width: 100%;
+}
+
+.form-footer {
+  border-top: 2px solid #F5F6FB;
+  padding: 25px 110px 25px 0;
+  width: 100%;
+}
+
+.buton-container {
+  width: 100%;
+}
+
+.input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 55px;
+  padding: 15px;
+  width: 100%;
+}
+.input.error.ng-touched {
+  border: 1px solid #E24D56;
+}
+
+/* .label {
+  background-color: #FFF;
+  bottom: 0;
+  color: #C2C2C2;
+  font-size: 12px;
+  pointer-events: none;
+} */
+
+.steps-count-container {
+  margin: 50px 0 20px 0;
+  width: 360px;
+}
+
+.selector-container {
+  max-width: 315px;
+  padding: 10px 0;
+}
+
+.selector-toggle {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 55px;
+  padding: 0 16px;
+}
+.selector-toggle.rotate .icon {
+  transform: rotate(180deg);
+}
+.selector-toggle.active {
+  background-color: #E3E8EB;
+}
+
+.options-container {
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.1), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 0 5px 5px -3px rgba(0, 0, 0, 0.1);
+  height: 240px;
+  max-width: 315px;
+  overflow-y: scroll;
+  padding: 24px 0;
+  transition: all cubic-bezier(0.79, 0.01, 0.38, 0.99) 290ms;
+  width: 100%;
+}
+
+.options-collapsed {
+  height: 0;
+  overflow-y: scroll;
+  transition: all cubic-bezier(0.79, 0.01, 0.38, 0.99) 290ms;
+}
+
+.option {
+  padding: 4px 25px;
+  width: 100%;
+}
+
+.quantity-input {
+  border: 1px solid #8D8D8D;
+  border-radius: 2px;
+  height: 30px;
+  text-align: center;
+  width: 40px;
+}
+
+/* .stepper-container {
+  margin: 0 auto;
+  max-width: 305px;
+} */
+
+.required {
+  bottom: 15px;
+  color: #E24D56;
+  font-size: 10px;
+  position: absolute;
+}
+
+.message-error {
+  color: #E24D56;
+  font-size: 10px;
+  left: 16px;
+  position: absolute;
+  top: 34px;
+}
+
+.modal {
+  height: 360px;
+  justify-content: space-evenly;
+  width: 550px;
+}
+
+.correct-creation {
+  right: 90px;
+  width: 90px;
+}
+
+.modal-description {
+  color: #505050;
+  position: relative;
+}
