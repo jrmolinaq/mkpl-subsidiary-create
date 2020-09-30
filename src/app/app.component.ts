@@ -214,8 +214,5 @@ export class AppComponent implements OnInit {
 		return (attribute: any) => form.get(`${formName}.${attribute}`).value;
 	  }
 
-
-
-
   }
   
